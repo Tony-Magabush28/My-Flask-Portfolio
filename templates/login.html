@@ -1,16 +1,25 @@
 {% extends 'base.html' %}
+
 {% block content %}
-    <div style="padding: 2rem; max-width: 400px; margin: auto;">
-        <h2>Login</h2>
-        <form method="POST">
-            <label>Username</label><br>
-            <input type="text" name="username"><br><br>
-            <label>Password</label><br>
-            <input type="password" name="password"><br><br>
-            <input type="submit" value="Login">
-            {% if error %}
-                <p style="color: red;">{{ error }}</p>
-            {% endif %}
-        </form>
-    </div>
+<div style="text-align: center; margin-top: 2rem;">
+    <h2>Login</h2>
+    <form method="POST">
+        <label for="username">Username</label><br>
+        <input type="text" name="username" required><br><br>
+        <label for="password">Password</label><br>
+        <input type="password" name="password" required><br><br>
+        <input type="submit" value="Login">
+    </form>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div style="color: red; margin-top: 1rem;">
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    {% endwith %}
+</div>
 {% endblock %}
