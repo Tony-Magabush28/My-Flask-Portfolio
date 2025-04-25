@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Toggle switch for Dark Mode -->
+    <label class="switch">
+        <input type="checkbox" id="mode-toggle" onchange="toggleMode()">
+        <span class="slider"></span>
+    </label>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/blog">Blog</a>
+        <a href="/testimonials">Testimonials</a>
+        <a href="/contact">Contact</a>
+        <a href="/skills">Skills</a>
+        {% if session.get('user') %}
+            <a href="/admin">Admin</a>
+            <a href="/logout">Logout</a>
+        {% else %}
+        <a href="/certifications">Certifications</a>
+            <a href="/login">Login</a>
+        {% endif %}
+    </nav>
+
+    <!-- Main Content Block -->
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Anthony Sergo. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://x.com/SergoAnthony?t=fb0U21HU3rCoCSDkVFt4Hw&s=09" target="_blank">Twitter</a> |
+            <a href="https://www.instagram.com/tonynickbush?igsh=cGI0NnZyYnk2bXI4" target="_blank">Instagram</a> |
+            <a href="https://www.linkedin.com/in/anthony-sergo1" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/Tony-Magabush28" target="_blank">GitHub</a>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Script -->
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>

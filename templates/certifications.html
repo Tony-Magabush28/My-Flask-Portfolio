@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block content %}
+<div style="padding: 2rem;">
+    <h1>Certifications</h1>
+    <p>Here are the certifications I have acquired across different institutions and platforms:</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+        <div class="cert-card">
+            <h3>Virtual Assistant - ALX</h3>
+            <p>Completed a comprehensive program in virtual assistance, covering tools, communication, time management, and client relationship management.</p>
+            <a href="{{ url_for('static', filename='certificates/va_alx.png') }}" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="cert-card">
+            <h3>Professional Foundation - ALX</h3>
+            <p>Mastered foundational soft and professional skills including leadership, collaboration, and effective project execution.</p>
+            <a href="{{ url_for('static', filename='certificates/pf_alx.png') }}" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="cert-card">
+            <h3>AI Career Essentials - ALX</h3>
+            <p>Gained practical knowledge in AI adoption, responsible use of AI tools, and their application in business settings.</p>
+            <a href="{{ url_for('static', filename='certificates/ai_alx.png') }}" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="cert-card">
+            <h3>Ghana Soft Skills Training - Jobberman</h3>
+            <p>Developed skills in communication, emotional intelligence, teamwork, time management, and critical thinking.</p>
+            <a href="{{ url_for('static', filename='certificates/jobberman_softskills.jpg') }}" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="cert-card">
+            <h3>Digital Skills: Global Gig Worker - Jobberman</h3>
+            <p>Learned how to work remotely, manage international clients, negotiate contracts, and operate efficiently in the gig economy.</p>
+            <a href="{{ url_for('static', filename='certificates/gig_worker.jpg') }}" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="cert-card">
+            <h3>Python Programming (Beginner & Intermediate) - Cisco</h3>
+            <p>Acquired strong Python programming skills including data structures, functions, file handling, and problem solving.</p>
+            <a href="{{ url_for('static', filename='certificates/python_cisco.pdf') }}" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="cert-card">
+            <h3>Python Programming (Backend) - W3Schools</h3>
+            <p>Focused on backend development using Python including web frameworks, APIs, and database connections.</p>
+            <a href="{{ url_for('static', filename='certificates/python_w3.pdf') }}" target="_blank">View Certificate</a>
+        </div>
+    </div>
+</div>
+
+<style>
+.cert-card {
+    background: #fff;
+    padding: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.cert-card h3 {
+    margin-top: 0;
+}
+.cert-card a {
+    display: inline-block;
+    margin-top: 0.8rem;
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: bold;
+}
+.cert-card a:hover {
+    text-decoration: underline;
+}
+</style>
+{% endblock %}

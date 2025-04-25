@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .skills-container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .skill-category {
+            margin-bottom: 30px;
+        }
+
+        .skill-category h3 {
+            color: #222;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .skill-list li {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .skill-list i {
+            color: #007BFF;
+            margin-right: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="skills-container">
+        <h2>My Skills</h2>
+
+        <div class="skill-category">
+            <h3><i class="fas fa-laptop-code"></i> Technical Skills</h3>
+            <ul class="skill-list">
+                <li><i class="fas fa-check-circle"></i> Python Programming</li>
+                <li><i class="fas fa-check-circle"></i> Flask Web Development</li>
+                <li><i class="fas fa-check-circle"></i> Data Visualization with Matplotlib</li>
+                <li><i class="fas fa-check-circle"></i> Git & GitHub</li>
+            </ul>
+        </div>
+
+        <div class="skill-category">
+            <h3><i class="fas fa-user-tie"></i> Professional Skills</h3>
+            <ul class="skill-list">
+                <li><i class="fas fa-check-circle"></i> Virtual Assistance</li>
+                <li><i class="fas fa-check-circle"></i> Data Entry & Admin Support</li>
+                <li><i class="fas fa-check-circle"></i> Project Writing</li>
+            </ul>
+        </div>
+
+        <div class="skill-category">
+            <h3><i class="fas fa-seedling"></i> Industry Knowledge</h3>
+            <ul class="skill-list">
+                <li><i class="fas fa-check-circle"></i> General Agriculture</li>
+            </ul>
+        </div>
+
+        <div class="skill-category">
+            <h3><i class="fas fa-people-arrows"></i> Soft Skills</h3>
+            <ul class="skill-list">
+                <li><i class="fas fa-check-circle"></i> Effective Communication</li>
+                <li><i class="fas fa-check-circle"></i> Teamwork & Collaboration</li>
+                <li><i class="fas fa-check-circle"></i> Time Management</li>
+                <li><i class="fas fa-check-circle"></i> Problem Solving</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Anthony Sergo. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
