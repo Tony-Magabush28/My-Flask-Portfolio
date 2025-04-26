@@ -1,43 +1,28 @@
 {% extends 'base.html' %}
+
 {% block content %}
     <div style="padding: 2rem;">
         <h2 style="text-align: center;">My Projects</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-top: 2rem;">
+            {% set projects = [
+                {'name': 'Weather App', 'description': 'A weather app built with API, and Tkinter.', 'url': 'https://github.com/Tony-Magabush28/weather-app'},
+                {'name': 'Portfolio Website', 'description': 'A portfolio website showcasing my work and skills.', 'url': 'https://github.com/Tony-Magabush28/My-Flask-Portfolio'},
+                {'name': 'Health Website', 'description': 'A health-focused platform providing wellness resources and tips.', 'url': 'https://github.com/Tony-Magabush28/HealthMate'}
+            ] %}
+            
+            {% for project in projects %}
             <div style="border: 1px solid #ccc; padding: 1.5rem; width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                <h3 style="text-align: center;">Weather App</h3>
-                <p style="text-align: center;">A weather app built with API, and Tkinter.</p>
+                <h3 style="text-align: center;">{{ project.name }}</h3>
+                <p style="text-align: center;">{{ project.description }}</p>
                 <div style="text-align: center;">
-                    <a href="https://github.com/Tony-Magabush28/weather-app" target="_blank">
+                    <a href="{{ project.url }}" target="_blank">
                         <button style="padding: 0.5rem 1rem; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
                             View
                         </button>
                     </a>
                 </div>
             </div>
-            <div style="border: 1px solid #ccc; padding: 1.5rem; width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                <h3 style="text-align: center;">Portfolio Website</h3>
-                <p style="text-align: center;">A portfolio website showcasing my work and skills.</p>
-                <div style="text-align: center;">
-                    <a href="https://github.com/Tony-Magabush28/My-Flask-Portfolio" target="_blank">
-                        <button style="padding: 0.5rem 1rem; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                            View
-                        </button>
-                    </a>
-                </div>
-            </div>
-            <div style="border: 1px solid #ccc; padding: 1.5rem; width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                <h3 style="text-align: center;">Health Website</h3>
-                <p style="text-align: center;">A health-focused platform providing wellness resources and tips.</p>
-                <div style="text-align: center;">
-                    <a href="https://github.com/Tony-Magabush28/HealthMate" target="_blank">
-                        <button style="padding: 0.5rem 1rem; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                            View
-                        </button>
-                    </a>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
-
-

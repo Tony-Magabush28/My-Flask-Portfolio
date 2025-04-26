@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
+
 {% block content %}
-<div style="text-align: center; margin-top: 2rem;"></div>
-<h1>Admin Dashboard</h1>
-<p>Welcome, Admin! Here you can manage content.</p>
+<div class="dashboard-container">
+    <h1 class="dashboard-title">Admin Dashboard</h1>
+    <p class="dashboard-description">Welcome, Admin! Here you can manage your content and settings.</p>
+    <div class="dashboard-links">
+        <a href="{{ url_for('projects') }}" class="dashboard-link projects-link">Manage Projects</a>
+        <a href="{{ url_for('blog') }}" class="dashboard-link blog-link">Manage Blog</a>
+        <a href="{{ url_for('testimonials') }}" class="dashboard-link testimonials-link">Manage Testimonials</a>
+        <a href="{{ url_for('contact') }}" class="dashboard-link contact-link">Manage Contact</a>
+    </div>
+</div>
 {% endblock %}
+
