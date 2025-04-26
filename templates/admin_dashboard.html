@@ -1,11 +1,6 @@
 {% extends 'base.html' %}
-
 {% block content %}
-<div style="text-align: center; margin-top: 2rem;">
-    <h1>Welcome to the Admin Dashboard, {{ session['user'] }}!</h1>
-    <p>You are successfully logged in.</p>
-    <a href="{{ url_for('logout') }}" style="padding: 0.5rem 1rem; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px;">Logout</a>
-</div>
+<div style="text-align: center; margin-top: 2rem;"></div>
+<h1>Admin Dashboard</h1>
+<p>Welcome, Admin! Here you can manage content.</p>
 {% endblock %}
-
-

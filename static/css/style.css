@@ -1,3 +1,4 @@
+/* Base styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -16,6 +17,11 @@ nav a {
   margin: 0 10px;
   text-decoration: none;
   color: #333;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #007BFF;
 }
 
 footer {
@@ -89,4 +95,9 @@ body.dark-mode nav a {
 
 body.dark-mode footer {
   border-color: #666;
+}
+
+/* Button hover effect */
+a:hover {
+  background-color: #0056b3;
 }
