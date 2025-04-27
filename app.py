@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, request, session, flash
+from flask import Flask, render_template, redirect, url_for, request, session, flash, jsonify
 from datetime import timedelta
 from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -40,7 +40,7 @@ def login():
 @app.route('/logout')
 def logout():
     session.pop('user', None)
-    return redirect(url_for('login'))  # Redirect to login after logout
+    return redirect(url_for('login'))
 
 @app.route('/')
 @login_required
@@ -87,11 +87,10 @@ def certifications():
 def admin_dashboard():
     return render_template('admin_dashboard.html', active_page='admin')
 
-@app.route('/dark-mode', methods=['GET'])
-def dark_mode():
+@app.route('/toggle-dark-mode', methods=['POST'])
+def toggle_dark_mode():
     session['dark_mode'] = not session.get('dark_mode', False)
-    return redirect(url_for('index'))
+    return ('', 204)
 
 if __name__ == '__main__':
     app.run(debug=True)
-

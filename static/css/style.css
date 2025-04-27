@@ -15,7 +15,7 @@ body {
 
 /* Navigation */
 nav {
-  background: #f8f8f8;
+  background: #1507dc;
   padding: 20px 0;
   text-align: center;
 }
@@ -28,7 +28,7 @@ nav a::after {
   height: 3px;
   left: 50%;
   bottom: -5px;
-  background-color: #007bff; /* Blue color underline */
+  background-color: #c2c5c8; /* Blue color underline */
   transition: all 0.3s ease;
   transform: translateX(-50%);
   border-radius: 2px;
@@ -55,85 +55,87 @@ nav a {
   transition: color 0.3s ease;
 }
 
-/* Main content */
-main {
-  flex: 1;
-}
-
-/* Footer */
 footer {
-  background: #f8f8f8;
-  padding: 20px 0;
-  text-align: center;
-  font-size: 14px;
-  color: #555;
   margin-top: auto;
-  position: relative;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  color: #333;
 }
 
-/* Social Links */
-.social-links {
-  margin-top: 10px;
-}
-
-.social-links a {
+footer a {
   text-decoration: none;
-  color: #555;
-  margin: 0 5px;
+  color: inherit;
+  font-weight: bold;
 }
 
-/* Login Form Styling */
+footer a:hover {
+  color: #007bff;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+.dark-mode nav {
+  background-color: #1a1a1a;
+}
+
+.dark-mode footer {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.dark-mode a {
+  color: #d3d3d3;
+}
+
+.dark-mode a:hover {
+  color: #0066cc;
+}
+
+/* Full-height container for centering */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #f0f0f0;
+  width: 100%;  /* Ensure full width */
+  margin: 0;
+  background: #f0f0f0;  /* Background for contrast */
 }
 
-.login-box {   /* corrected to match your HTML */
+/* Styling the login box */
+.login-box {
   background: #ffffff;
   padding: 50px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 450px;
+  max-width: 500px;  /* You can adjust this for desired width */
   text-align: center;
+  font-size: 18px;  /* Larger text size */
 }
 
-.login-box h2 {
-  margin-bottom: 25px;
-  font-size: 32px;
-  color: #333;
-}
-
-.input-group {
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.input-group label {
-  display: block;
-  margin-bottom: 8px;
-  color: #555;
-}
-
+/* Making the login inputs and buttons larger */
 .input-group input {
   width: 100%;
-  padding: 14px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
+  padding: 18px; /* Increased padding for larger input fields */
+  font-size: 18px; /* Larger font size */
+  margin-bottom: 15px;  /* Spacing between inputs */
 }
 
 button[type="submit"] {
   width: 100%;
-  padding: 14px;
+  padding: 18px;  /* Increased padding */
+  font-size: 20px; /* Larger text for the button */
   background-color: #007bff;
   border: none;
   border-radius: 8px;
   color: white;
-  font-size: 18px;
   cursor: pointer;
 }
 
@@ -141,12 +143,16 @@ button[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-/* Error Message */
-.error-message ul {
-  margin-top: 15px;
-  padding: 12px;
-  background-color: #f8d7da;
-  color: #721c24;
-  border-radius: 8px;
-  list-style: none;
+/* Ensure all the content fits well */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;  /* Ensure body takes full height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
 }
+
+
