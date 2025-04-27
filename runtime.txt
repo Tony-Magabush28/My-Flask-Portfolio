@@ -1,3 +1,1 @@
-git add runtime.txt
-git commit -m "Add runtime.txt for Render deployment"
-git push
+Python 3.13.3
