@@ -85,6 +85,54 @@
         input:checked + .slider:before {
             transform: translateX(26px);
         }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            nav {
+                padding: 10px 0;
+            }
+            #nav-links {
+                display: none;
+                flex-direction: column;
+                margin-top: 10px;
+            }
+            #nav-links a {
+                margin: 10px 0;
+                font-size: 16px;
+            }
+            .hamburger {
+                display: block;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+            .hamburger div {
+                width: 30px;
+                height: 3px;
+                background-color: #333;
+                margin: 6px 0;
+                transition: 0.4s;
+            }
+            .hamburger.toggle div:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+            .hamburger.toggle div:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.toggle div:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+            .toggle-active {
+                display: flex;
+            }
+            footer {
+                font-size: 12px;
+                padding: 15px 0;
+            }
+            .social-links a {
+                font-size: 12px;
+                margin: 0 8px;
+            }
+        }
     </style>
 </head>
 <body class="{% if session.get('dark_mode') %}dark-mode{% endif %}">
