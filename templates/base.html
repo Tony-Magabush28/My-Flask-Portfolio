@@ -161,12 +161,7 @@
                 <a href="/testimonials">Testimonials</a>
                 <a href="/contact">Contact</a>
                 <a href="/skills">Skills</a>
-                {% if session.get('user') %}
-                    <a href="/certifications">Certifications</a>
-                    <a href="/logout">Logout</a>
-                {% else %}
-                    <a href="/login">Login</a>
-                {% endif %}
+                <a href="/certifications">Certifications</a> <!-- Keep Certifications link -->
             </div>
         </div>
     </nav>
