@@ -3,7 +3,12 @@
 {% block content %}
     <div style="padding: 2rem;">
         <h2 style="text-align: center;">My Projects</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-top: 2rem;">
+        <div style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        ">
             {% set projects = [
                 {'name': 'Health Website', 'description': 'A simple web app that helps users track their daily health, like symptoms, medications, sleep, and more to stay organized and make better health decisions.', 'url': 'https://healthmate-xc1z.onrender.com'},
                 {'name': 'Expense Tracker', 'description': 'Expense Tracker is a Flask-based web app that helps users track income and expenses, set monthly budgets, and monitor spending.', 'url': 'https://expense-tracker-h6qd.onrender.com'},
@@ -13,10 +18,19 @@
             ] %}
 
             {% for project in projects %}
-                <div style="border: 1px solid #ccc; padding: 1.5rem; width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <div style="
+                    background-color: white;
+                    border: 1px solid #ccc;
+                    padding: 1.5rem;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                ">
                     <h3 style="text-align: center;">{{ project.name }}</h3>
                     <p style="text-align: center;">{{ project.description }}</p>
-                    <div style="text-align: center;">
+                    <div style="text-align: center; margin-top: 1rem;">
                         <a href="{{ project.url }}" target="_blank">
                             <button style="padding: 0.5rem 1rem; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
                                 View
