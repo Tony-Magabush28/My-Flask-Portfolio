@@ -6,89 +6,6 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-        }
-        nav {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #f8f8f8;
-        }
-        #nav-links a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: inherit;
-        }
-        footer {
-            margin-top: auto;
-            text-align: center;
-            padding: 20px 0;
-            background-color: #f8f8f8;
-            font-size: 14px;
-        }
-        .social-links a {
-            margin: 0 5px;
-            text-decoration: none;
-            color: inherit;
-        }
-        .hamburger {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                padding: 10px 0;
-            }
-            #nav-links {
-                display: none;
-                flex-direction: column;
-                margin-top: 10px;
-            }
-            #nav-links a {
-                margin: 10px 0;
-                font-size: 16px;
-            }
-            .hamburger {
-                display: block;
-                cursor: pointer;
-                margin-top: 10px;
-            }
-            .hamburger div {
-                width: 30px;
-                height: 3px;
-                background-color: #333;
-                margin: 6px 0;
-                transition: 0.4s;
-            }
-            .hamburger.toggle div:nth-child(1) {
-                transform: rotate(-45deg) translate(-5px, 6px);
-            }
-            .hamburger.toggle div:nth-child(2) {
-                opacity: 0;
-            }
-            .hamburger.toggle div:nth-child(3) {
-                transform: rotate(45deg) translate(-5px, -6px);
-            }
-            .toggle-active {
-                display: flex;
-            }
-            footer {
-                font-size: 12px;
-                padding: 15px 0;
-            }
-            .social-links a {
-                font-size: 12px;
-                margin: 0 8px;
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -103,7 +20,7 @@
 <nav>
     <div class="nav-container">
         <a href="/" class="active"><i class="fas fa-home"></i> Home</a>
-        <div id="nav-links" style="margin-top: 10px;">
+        <div id="nav-links">
             <a href="/about"><i class="fas fa-user"></i> About</a>
             <a href="/projects"><i class="fas fa-project-diagram"></i> Projects</a>
             <a href="/blog"><i class="fas fa-pen"></i> Blog</a>
