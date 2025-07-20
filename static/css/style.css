@@ -45,13 +45,36 @@ nav {
 }
 
 nav .nav-container > a.active {
-    color: #000;
+    color: hsla(0, 15%, 85%, 0.904);
     font-weight: bold;
     font-size: 18px;
     text-transform: uppercase;
     text-decoration: none;
     margin-bottom: 10px;
     display: inline-block;
+    position: relative;
+}
+
+/* Hover effect for home link */
+nav .nav-container > a.active:hover {
+    color: #007bff;
+}
+
+nav .nav-container > a.active::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    left: 50%;
+    bottom: -5px;
+    background-color: #c2c5c8;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+nav .nav-container > a.active:hover::after {
+    width: 100%;
 }
 
 #nav-links {
@@ -95,10 +118,6 @@ nav .nav-container > a.active {
 
 #nav-links a i {
     margin-right: 5px;
-}
-
-nav a.active::after {
-    display: none;
 }
 
 /* ----------------- Footer ----------------- */
