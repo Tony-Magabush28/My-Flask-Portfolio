@@ -43,10 +43,5 @@ def certifications():
 def admin_dashboard():
     return render_template('admin_dashboard.html', active_page='admin')
 
-@app.route('/toggle-dark-mode', methods=['POST'])
-def toggle_dark_mode():
-    session['dark_mode'] = not session.get('dark_mode', False)
-    return ('', 204)
-
 if __name__ == '__main__':
     app.run(debug=True)

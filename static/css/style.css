@@ -28,7 +28,7 @@ nav a::after {
   height: 3px;
   left: 50%;
   bottom: -5px;
-  background-color: #c2c5c8; /* Blue color underline */
+  background-color: #c2c5c8;
   transition: all 0.3s ease;
   transform: translateX(-50%);
   border-radius: 2px;
@@ -49,7 +49,7 @@ nav a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
-  text-transform: uppercase; /* CAPITAL letters */
+  text-transform: uppercase;
   font-size: 16px;
   padding: 5px 10px;
   transition: color 0.3s ease;
@@ -74,38 +74,15 @@ footer a:hover {
   color: #007bff;
 }
 
-/* Dark Mode Styles */
-.dark-mode {
-  background-color: #121212;
-  color: #fff;
-}
-
-.dark-mode nav {
-  background-color: #1a1a1a;
-}
-
-.dark-mode footer {
-  background-color: #1a1a1a;
-  color: #fff;
-}
-
-.dark-mode a {
-  color: #d3d3d3;
-}
-
-.dark-mode a:hover {
-  color: #0066cc;
-}
-
 /* Full-height container for centering */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100%;  /* Ensure full width */
+  width: 100%;
   margin: 0;
-  background: #f0f0f0;  /* Background for contrast */
+  background: #f0f0f0;
 }
 
 /* Styling the login box */
@@ -115,23 +92,23 @@ footer a:hover {
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 500px;  /* You can adjust this for desired width */
+  max-width: 500px;
   text-align: center;
-  font-size: 18px;  /* Larger text size */
+  font-size: 18px;
 }
 
 /* Making the login inputs and buttons larger */
 .input-group input {
   width: 100%;
-  padding: 18px; /* Increased padding for larger input fields */
-  font-size: 18px; /* Larger font size */
-  margin-bottom: 15px;  /* Spacing between inputs */
+  padding: 18px;
+  font-size: 18px;
+  margin-bottom: 15px;
 }
 
 button[type="submit"] {
   width: 100%;
-  padding: 18px;  /* Increased padding */
-  font-size: 20px; /* Larger text for the button */
+  padding: 18px;
+  font-size: 20px;
   background-color: #007bff;
   border: none;
   border-radius: 8px;
@@ -148,7 +125,7 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  height: 100vh;  /* Ensure body takes full height */
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,7 +134,6 @@ body {
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
-    /* Mobile-specific styles for the navigation */
     nav {
         padding: 15px 0;
     }
@@ -168,7 +144,6 @@ body {
         display: block;
     }
 
-    /* Hamburger Menu visibility */
     .hamburger {
         display: block;
         cursor: pointer;
@@ -182,14 +157,12 @@ body {
         display: block;
     }
 
-    /* Adjustments for login box */
     .login-box {
         padding: 30px;
         width: 80%;
         max-width: 400px;
     }
 
-    /* Larger inputs and buttons */
     .input-group input,
     button[type="submit"] {
         padding: 15px;
@@ -210,5 +183,3 @@ body {
         font-size: 12px;
     }
 }
-
-
