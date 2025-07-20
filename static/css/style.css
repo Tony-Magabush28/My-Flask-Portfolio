@@ -33,6 +33,18 @@ body::before {
     z-index: -1;
 }
 
+/* ----------------- Reusable Container ----------------- */
+.container {
+    background-color: white;
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin: 2rem auto;
+    text-align: center;
+}
+
 /* ----------------- Navigation ----------------- */
 nav {
     background: transparent;
@@ -45,7 +57,7 @@ nav {
 }
 
 nav .nav-container > a.active {
-    color: hsla(0, 15%, 85%, 0.904);
+    color: hsla(0, 28%, 95%, 0.904);
     font-weight: bold;
     font-size: 18px;
     text-transform: uppercase;
@@ -55,7 +67,6 @@ nav .nav-container > a.active {
     position: relative;
 }
 
-/* Hover effect for home link */
 nav .nav-container > a.active:hover {
     color: #007bff;
 }
@@ -124,20 +135,36 @@ nav .nav-container > a.active:hover::after {
 footer {
     margin-top: auto;
     text-align: center;
-    padding: 20px;
-    background-color: transparent;
+    padding: 2rem;
+    background: none;
+    color: white;
+}
+
+footer p {
     font-size: 14px;
-    color: #333;
+    color: white;
+    margin-bottom: 0.5rem;
 }
 
 footer a {
     text-decoration: none;
-    color: inherit;
+    color: white;
     font-weight: bold;
 }
 
 footer a:hover {
     color: #007bff;
+}
+
+/* ----------------- Social Links ----------------- */
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 14px;
+    color: white;
 }
 
 /* ----------------- Login Page ----------------- */
@@ -238,6 +265,23 @@ button[type="submit"]:hover {
     color: #007BFF;
 }
 
+/* ----------------- Hamburger ----------------- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
 /* ----------------- Media Queries ----------------- */
 @media (max-width: 768px) {
     nav {
@@ -260,8 +304,7 @@ button[type="submit"]:hover {
     }
 
     .hamburger {
-        display: block;
-        cursor: pointer;
+        display: flex;
     }
 
     .login-box {
