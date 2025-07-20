@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        /* Quick styles inside here to make it perfect */
         body {
             display: flex;
             flex-direction: column;
@@ -42,7 +42,6 @@
             display: none;
         }
 
-        /* Mobile Styles */
         @media (max-width: 768px) {
             nav {
                 padding: 10px 0;
@@ -111,7 +110,7 @@
                 <a href="/testimonials">Testimonials</a>
                 <a href="/contact">Contact</a>
                 <a href="/skills">Skills</a>
-                <a href="/certifications">Certifications</a> <!-- Keep Certifications link -->
+                <a href="/certifications">Certifications</a>
             </div>
         </div>
     </nav>
@@ -130,7 +129,6 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById('nav-links');

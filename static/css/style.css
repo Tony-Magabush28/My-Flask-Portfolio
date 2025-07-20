@@ -1,138 +1,179 @@
-/* Global Reset */
+/* ----------------- Global Reset ----------------- */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Body Setup */
+/* ----------------- Body Setup ----------------- */
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Navigation */
+/* ----------------- Navigation ----------------- */
 nav {
-  background: #1507dc;
-  padding: 20px 0;
-  text-align: center;
-}
-
-/* Add an animated underline */
-nav a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 3px;
-  left: 50%;
-  bottom: -5px;
-  background-color: #c2c5c8;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
-  border-radius: 2px;
-}
-
-/* Hover effect */
-nav a:hover {
-  color: #007bff;
-}
-
-nav a:hover::after {
-  width: 100%;
+    background: #1507dc;
+    padding: 20px 0;
+    text-align: center;
 }
 
 nav a {
-  position: relative;
-  margin: 0 15px;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 16px;
-  padding: 5px 10px;
-  transition: color 0.3s ease;
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
 }
 
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    left: 50%;
+    bottom: -5px;
+    background-color: #c2c5c8;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ----------------- Footer ----------------- */
 footer {
-  margin-top: auto;
-  text-align: center;
-  padding: 20px;
-  background-color: #f8f8f8;
-  font-size: 14px;
-  color: #333;
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    color: #333;
 }
 
 footer a {
-  text-decoration: none;
-  color: inherit;
-  font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
 }
 
 footer a:hover {
-  color: #007bff;
+    color: #007bff;
 }
 
-/* Full-height container for centering */
+/* ----------------- Login Page ----------------- */
 .login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  margin: 0;
-  background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    background: #f0f0f0;
 }
 
-/* Styling the login box */
 .login-box {
-  background: #ffffff;
-  padding: 50px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 500px;
-  text-align: center;
-  font-size: 18px;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    font-size: 18px;
 }
 
-/* Making the login inputs and buttons larger */
 .input-group input {
-  width: 100%;
-  padding: 18px;
-  font-size: 18px;
-  margin-bottom: 15px;
+    width: 100%;
+    padding: 18px;
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 
 button[type="submit"] {
-  width: 100%;
-  padding: 18px;
-  font-size: 20px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
+    width: 100%;
+    padding: 18px;
+    font-size: 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
 }
 
 button[type="submit"]:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
-/* Ensure all the content fits well */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f0f0;
+/* ----------------- Skills Page ----------------- */
+.skills-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
-/* Media Queries for Mobile Responsiveness */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.skill-category {
+    flex: 1 1 250px;
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+}
+
+.skill-category h3 {
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.skill-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.skill-list li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.6;
+}
+
+.skill-list li i {
+    color: #007BFF;
+}
+
+/* ----------------- Media Queries ----------------- */
 @media (max-width: 768px) {
     nav {
         padding: 15px 0;
@@ -181,5 +222,10 @@ body {
     .social-links a {
         margin: 0 8px;
         font-size: 12px;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+        gap: 20px;
     }
 }
