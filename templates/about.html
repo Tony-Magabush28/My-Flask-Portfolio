@@ -1,19 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div style="padding: 2rem; text-align : center;">
-        <h2>About Me</h2>
+    <div style="padding: 2rem; display: flex; justify-content: center;">
+        <div style="
+            background-color: white;
+            padding: 2rem;
+            max-width: 600px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        ">
+            <h2>About Me</h2>
 
-        <blockquote style="margin: 1rem auto; font-style: Consolas;">
-           <p>👋 Hi there! I'm Anthony Sergo —
-🔭 Currently exploring Machine Learning and SQL
-🛠️ Skilled in Python, Virtual Assistant, General Agriculture, and General Programming
-🌱 Passionate about AI, open-source, and continuous learning
-💡 I enjoy solving problems, automating tasks, and experimenting with new tech
-📫 Let's connect: LinkedIn 
-🚀 Always open to collaboration and learning!</p>
-        </blockquote>
+            <blockquote style="margin: 1rem auto; font-family: Consolas; font-style: normal; line-height: 1.6;">
+                <p>👋 Hi there! I'm Anthony Sergo —<br>
+                🔭 Currently exploring Machine Learning and SQL<br>
+                🛠️ Skilled in Python, Virtual Assistant, General Agriculture, and General Programming<br>
+                🌱 Passionate about AI, open-source, and continuous learning<br>
+                💡 I enjoy solving problems, automating tasks, and experimenting with new tech<br>
+                📫 Let's connect: LinkedIn<br>
+                🚀 Always open to collaboration and learning!</p>
+            </blockquote>
+        </div>
     </div>
 {% endblock %}
-
-

@@ -1,24 +1,32 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div style="padding: 2rem; text-align : center;">
-        <h2>Contact</h2>
+    <div style="padding: 2rem; display: flex; justify-content: center;">
+        <div style="
+            background-color: white;
+            padding: 2rem;
+            max-width: 600px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        ">
+            <h2>Contact</h2>
 
-        <blockquote style="margin: 1rem auto; font-style: Consolas;"></blockquote>
-           <p>If you have any questions or want to get in touch, feel free to reach out!</p>
-           <p>You can contact me via email or phone:</p>
-        </blockquote>
+            <blockquote style="margin: 1rem auto; font-family: Consolas; font-style: normal; line-height: 1.6;">
+                <p>If you have any questions or want to get in touch, feel free to reach out!</p>
+                <p>You can contact me via email or phone:</p>
+            </blockquote>
 
-        <blockquote style="margin: 1rem auto; font-style: Consolas;"></blockquote>
-           <p>Name: Anthony Sergo</p>
-           <p>Location: Ghana</p>
-        </blockquote>
+            <blockquote style="margin: 1rem auto; font-family: Consolas; font-style: normal; line-height: 1.6;">
+                <p>Name: Anthony Sergo</p>
+                <p>Location: Ghana</p>
+            </blockquote>
 
-        <blockquote style="margin: 1rem auto; font-style: Consolas;"></blockquote>
-           <p>Email: anthonysergo9@gmail.com</p>
-           <p>Number: +233549070835</p>
-        </blockquote>
+            <blockquote style="margin: 1rem auto; font-family: Consolas; font-style: normal; line-height: 1.6;">
+                <p>Email: anthonysergo9@gmail.com</p>
+                <p>Number: +233549070835</p>
+            </blockquote>
+        </div>
     </div>
 {% endblock %}
-
-

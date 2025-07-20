@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: url("/static/images/profile.jpg") no-repeat center center fixed;
+    background: url("/static/images/bg.jpg") no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     position: relative;

@@ -1,16 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div style="padding: 2rem; text-align: center;">
-    <h2>Testimonials</h2>
+    <div style="padding: 2rem; display: flex; justify-content: center;">
+        <div style="
+            background-color: white;
+            padding: 2rem;
+            max-width: 600px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        ">
+            <h2>Testimonials</h2>
 
-    <blockquote style="margin: 1rem auto; font-style: Consolas;">
-        "Anthony is a hardworking and skilled developer who always delivers." — Happy Client
-    </blockquote>
+            <blockquote style="margin: 1rem auto; font-family: Consolas; font-style: normal; line-height: 1.6;">
+                "Anthony is a hardworking and skilled developer who always delivers." — Happy Client
+            </blockquote>
 
-    <blockquote style="margin: 1rem auto; font-style: Consolas;">
-        "Working with Anthony was a great experience. His commitment and talent made our project a success." — Project Partner
-    </blockquote>
-</div>
+            <blockquote style="margin: 1rem auto; font-family: Consolas; font-style: normal; line-height: 1.6;">
+                "Working with Anthony was a great experience. His commitment and talent made our project a success." — Project Partner
+            </blockquote>
+        </div>
+    </div>
 {% endblock %}
-
