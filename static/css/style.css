@@ -229,3 +229,7 @@ button[type="submit"]:hover {
         gap: 20px;
     }
 }
+
+nav a i {
+    margin-right: 5px;
+}
