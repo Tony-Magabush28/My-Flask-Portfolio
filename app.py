@@ -1,5 +1,6 @@
 from flask import Flask, render_template, redirect, url_for, request, session, flash, jsonify
 from datetime import timedelta
+from flask import send_from_directory
 
 app = Flask(__name__)
 app.secret_key = 'app.tony_magabush'
@@ -42,6 +43,15 @@ def certifications():
 @app.route('/admin')
 def admin_dashboard():
     return render_template('admin_dashboard.html', active_page='admin')
+
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory('static', 'sitemap.xml')
+
+@app.route('/robots.txt')
+def robots_txt():
+    return send_from_directory('static', 'robots.txt')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
