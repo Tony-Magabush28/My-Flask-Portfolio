@@ -1,43 +1,91 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div style="padding: 2rem;">
-        <h2 style="text-align: center; color: white;">My Projects</h2>
-        <div style="
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        ">
-            {% set projects = [
-                {'name': 'Crop Yield Prediction', 'description': 'A machine learning web application that predicts crop yield based on environmental and farm management factors such as rainfall, temperature, soil type, and fertilizer usage.', 'url': 'https://crop-yield-prediction-3ltsvzo5fso7k7jzy5swvb.streamlit.app/'},
-                {'name': 'Email Spam Classifier', 'description': 'A machine learning model that classifies emails as spam or not spam.', 'url': 'https://email-spam-classifier-jb9adewm5isnfjisgrwogd.streamlit.app/'},
-                {'name': 'Travel Itinerary Planner', 'description': 'A dynamic Flask-based web application that helps users plan their travel itineraries with ease. Users can input destinations, travel dates, and activities, and the app automatically generates a daily travel plan.', 'url': 'https://travel-itinerary-planner-hnut.onrender.com'},
-                {'name': 'QRMenu Scanner', 'description': 'A simple web app for restaurants where customers scan a QR code to view the menu and place orders. Staff can manage orders through an admin panel.', 'url': 'https://restaurant-menu-qrcode.onrender.com'}
-            ] %}
 
-            {% for project in projects %}
-                <div style="
-                    background-color: white;
-                    border: 1px solid #ccc;
-                    padding: 1.5rem;
-                    border-radius: 8px;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                ">
-                    <h3 style="text-align: center;">{{ project.name }}</h3>
-                    <p style="text-align: center;">{{ project.description }}</p>
-                    <div style="text-align: center; margin-top: 1rem;">
-                        <a href="{{ project.url }}" target="_blank">
-                            <button style="padding: 0.5rem 1rem; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                                View
-                            </button>
-                        </a>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
+<div style="padding: 2rem">
+
+  <h2 style="text-align: center; color: white">My Projects</h2>
+
+  <div
+    style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    "
+  >
+
+    {% set projects = [
+      {
+        'name': 'Expense Tracker',
+        'description': 'A simple expense tracker for recording, categorizing, and managing daily income and expenses, with an easy-to-use dashboard for tracking personal finances.',
+        'url': 'https://expense-tracker-h6qd.onrender.com'
+      },
+      {
+        'name': 'Travel Itinerary Planner',
+        'description': 'A dynamic Flask-based web application that helps users plan their travel itineraries with ease. Users can input destinations, travel dates, and activities, and the app automatically generates a daily travel plan.',
+        'url': 'https://travel-itinerary-planner-hnut.onrender.com'
+      },
+      {
+        'name': 'QRMenu Scanner',
+        'description': 'A simple web app for restaurants where customers scan a QR code to view the menu and place orders. Staff can manage orders through an admin panel.',
+        'url': 'https://restaurant-menu-qrcode.onrender.com'
+      }
+    ] %}
+
+    {% for project in projects %}
+
+    <div
+      style="
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      "
+    >
+
+      <h3 style="text-align: center">
+        {{ project.name }}
+      </h3>
+
+      <p style="text-align: center">
+        {{ project.description }}
+      </p>
+
+      <div style="text-align: center; margin-top: 1rem">
+
+        <a
+          href="{{ project.url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button
+            type="button"
+            style="
+              padding: 0.5rem 1rem;
+              background-color: #007bff;
+              color: white;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+          >
+            View
+          </button>
+        </a>
+
+      </div>
+
     </div>
+
+    {% endfor %}
+
+  </div>
+
+</div>
+
 {% endblock %}
